@@ -4,20 +4,21 @@ using namespace std;
 class Solution {
 public:
     bool isSumEqual(string firstWord, string secondWord, string targetWord) {
-        int firstNum, secondNum, thirdNum;
+        int firstNum = 0, secondNum = 0, thirdNum =0;
 
         for(char c: firstWord) {
-            firstNum += (c-'a')*10;
+            firstNum = firstNum*10 + (c-'a');
         }
 
         for(char c: secondWord){
-            secondNum += (c-'a')*10;
+            secondNum = secondNum*10 + (c-'a');
         }
 
         for(char c: targetWord){
-            thirdNum += (c-'a')*10;
+            thirdNum = thirdNum*10 +(c-'a');
         }
 
+        cout << firstNum << " " << secondNum << " " << thirdNum << endl;
         if(firstNum+secondNum == thirdNum){
             return true;
         }else{

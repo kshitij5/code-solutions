@@ -1,6 +1,13 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "vector": "cpp",
+        "string_view": "cpp",
+        "regex": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "functional": "cpp"
     }
 }
