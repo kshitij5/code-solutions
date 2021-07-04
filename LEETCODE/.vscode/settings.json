@@ -8,6 +8,9 @@
         "deque": "cpp",
         "list": "cpp",
         "string": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "ostream": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp"
     }
 }
