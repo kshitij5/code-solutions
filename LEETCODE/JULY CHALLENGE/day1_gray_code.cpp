@@ -32,7 +32,7 @@ public:
     // the leftmost set bits(i) remains the same, while (i+1)th bits
     // in gray is inverse of (i+1)th bit in binary number.
 
-    // in binary, we are basically adding n to n >> 1 bit by bit with no carry(xor);
+    // in binary, we are basically adding n to n >> 1 bit by bit with no carry(i.e., performing xor);
 
     // this can be easily achieved using bit manupulation
     vector<int> grayCode(int n) {
