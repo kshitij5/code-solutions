@@ -14,22 +14,21 @@ public:
         if(s[0]=='0') return 0;
 
         vector<int> dp(s.size()+1, 0);
+
         dp[0] = 1;
-        for(int i = 1; i < s.size(); i++) {
-            int val = to_int(s.substr(i - 1, 2));
-            if(val<=26 && s[i+1]!='0') {
-                dp[i] = dp[i - 1] + 1;
-                continue;
-            }
+        dp[1] = s[0]!= '0' ? 1 : 0;
+        for(int i = 2; i <= s.size(); i++) {
+            int first = to_int(s.substr(i-1, 1));
+            int second = to_int(s.substr(i-2, 2));
 
-            if(s[i]=='0'){
-                dp[i] = 0;
-                continue;
+            if (first >= 1 && first <= 9) {
+                dp[i] += dp[i - 1];
             }
-
-            dp[i] = dp[i - 1];
+            if (second >= 10 && second <= 26) {
+                dp[i] += dp[i - 2];
+            }
         }
 
-        return dp[s.size()-1];
+        return dp[s.size()];
     }
 };
